@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Fondo from "../assets/fondo.jpg";
+// import Fondo from "../assets/fondo.jpg";
 import Logo from "../assets/althuslogo.svg";
 import "../Style/Login.css";
 import { InputText } from "primereact/inputtext";
@@ -13,7 +13,7 @@ export default function Login() {
   return (
     <>
       <div className="container_login">
-        <img src={Fondo} alt="Fondo agua" />
+        {/* <img src={Fondo} alt="Fondo agua" /> */}
         <div className="container-form">
           <div className="container_square">
             <img
