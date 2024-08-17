@@ -5,6 +5,7 @@ import "../Style/Login.css";
 import { InputText } from "primereact/inputtext";
 import { Password } from "primereact/password";
 import { Button } from "primereact/button";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -42,8 +43,19 @@ export default function Login() {
                 toggleMask
               />
             </div>
-            <div className="button_acceder_login" style={{marginTop: "20px"}}>
-              <Button label="Acceder" text raised style={{padding: "6px", background: "white", color: "#06C5FA"}}/>
+            <div className="button_acceder_login" style={{ marginTop: "20px" }}>
+              <Link to="/inicio">
+                <Button
+                  label="Acceder"
+                  text
+                  raised
+                  style={{
+                    padding: "6px",
+                    background: "white",
+                    color: "#06C5FA",
+                  }}
+                />
+              </Link>
             </div>
           </div>
         </div>
