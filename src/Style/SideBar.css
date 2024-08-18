@@ -1,0 +1,11 @@
+.container_sideBar Button{
+    background-color: #91D7E7;
+    border: none;
+    color: #2A415F;
+    width: 40px;
+    height: 40px;
+}
+
+.container_sideBar .p-button-icon {
+    font-size: 20px;
+}

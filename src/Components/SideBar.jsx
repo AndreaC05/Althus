@@ -5,6 +5,8 @@ import { Avatar } from "primereact/avatar";
 import { Ripple } from "primereact/ripple";
 import { StyleClass } from "primereact/styleclass";
 
+import "../Style/SideBar.css";
+
 import Logo from "../assets/althuslogo.svg";
 
 export default function SideBar() {
@@ -16,8 +18,8 @@ export default function SideBar() {
 
   return (
     <>
-      <div className="card flex justify-content-center">
-        <Button icon="pi pi-bars" onClick={() => setVisible(true)} />
+      <div className="card flex container_sideBar">
+        <Button icon="pi pi-list" onClick={() => setVisible(true)} className="ml-3 mt-3"/>
         <Sidebar visible={visible} onHide={() => setVisible(false)}>
           <div className="min-h-screen flex relative lg:static surface-ground">
             <div
@@ -27,7 +29,7 @@ export default function SideBar() {
             >
               <div className="flex flex-column h-full">
                 <div className="flex align-items-center justify-content-between px-4 pt-3 flex-shrink-0">
-                    <img src={Logo} alt="" style={{width: "130px"}}/>
+                  <img src={Logo} alt="" style={{ width: "130px" }} />
                   <Button
                     type="button"
                     icon="pi pi-times"
@@ -61,7 +63,7 @@ export default function SideBar() {
                         <li>
                           <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                             <i className="pi pi-home mr-2"></i>
-                            <span className="font-medium">Dashboard</span>
+                            <span className="font-medium">Home</span>
                             <Ripple />
                           </a>
                         </li>
@@ -75,7 +77,7 @@ export default function SideBar() {
                         <li>
                           <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                             <i className="pi pi-calendar mr-2"></i>
-                            <span className="font-medium">Calendar</span>
+                            <span className="font-medium">Reservations</span>
                             <Ripple />
                           </a>
                         </li>
@@ -117,7 +119,7 @@ export default function SideBar() {
                         <li>
                           <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                             <i className="pi pi-chart-line mr-2"></i>
-                            <span className="font-medium">Performance</span>
+                            <span className="font-medium">Dashboard</span>
                             <Ripple />
                           </a>
                         </li>
@@ -145,7 +147,7 @@ export default function SideBar() {
                         <li>
                           <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                             <i className="pi pi-shopping-cart mr-2"></i>
-                            <span className="font-medium">Shop</span>
+                            <span className="font-medium">Customers</span>
                             <Ripple />
                           </a>
                         </li>
