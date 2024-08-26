@@ -9,3 +9,7 @@
 .container_sideBar .p-button-icon {
     font-size: 20px;
 }
+
+.listclientes li a{
+    text-decoration: none;
+}

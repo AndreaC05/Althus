@@ -13,6 +13,7 @@ import Reserva from "./Pages/Reserva";
 import Pedidos from "./Pages/Pedidos";
 import Otros from "./Pages/Otros";
 import ListClientes from "./Pages/ListClientes";
+import Productos from "./Pages/Productos";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/reserva" element={<Reserva />}></Route>
             <Route path="/pedidos" element={<Pedidos />} />
             <Route path="/otros" element={<Otros />} />
+            <Route path="/productos" element={<Productos />} />
             <Route path="/" element={<Login />} />
           {/* <Route path="/registro" element={<RegistroLogin />} /> */}
         </Routes>
