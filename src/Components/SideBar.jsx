@@ -15,7 +15,7 @@ export default function SideBar() {
   const btnRef2 = useRef(null);
   const btnRef3 = useRef(null);
   const btnRef4 = useRef(null);
-  const btnRef5 = useRef(null); // Reference for the Customers section within ORGANIZATION
+  const btnRef5 = useRef(null); 
 
   return (
     <>
@@ -74,7 +74,7 @@ export default function SideBar() {
                         </li>
                         <li>
                           <Link to="/productos" style={{textDecoration: "none"}} className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
-                            <i className="pi pi-bookmark mr-2"></i>
+                            <i className="pi pi-box mr-2"></i>
                             <span className="font-medium">Productos</span>
                             <Ripple />
                           </Link>
@@ -82,14 +82,14 @@ export default function SideBar() {
                         <li>
                           <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                             <i className="pi pi-calendar mr-2"></i>
-                            <span className="font-medium">Reservations</span>
+                            <span className="font-medium">Reserva</span>
                             <Ripple />
                           </a>
                         </li>
                         <li>
                           <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
-                            <i className="pi pi-envelope mr-2"></i>
-                            <span className="font-medium">Messages</span>
+                            <i className="pi pi-check-square mr-2"></i>
+                            <span className="font-medium">Pedidos</span>
                             <Ripple />
                           </a>
                         </li>
