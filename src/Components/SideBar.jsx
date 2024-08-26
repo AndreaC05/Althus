@@ -4,6 +4,7 @@ import { Button } from "primereact/button";
 import { Avatar } from "primereact/avatar";
 import { Ripple } from "primereact/ripple";
 import { StyleClass } from "primereact/styleclass";
+import { Link } from "react-router-dom";
 
 import "../Style/SideBar.css";
 import Logo from "../assets/althuslogo.svg";
@@ -19,7 +20,11 @@ export default function SideBar() {
   return (
     <>
       <div className="card flex container_sideBar">
-        <Button icon="pi pi-list" onClick={() => setVisible(true)} className="ml-3 mt-3"/>
+        <Button
+          icon="pi pi-list"
+          onClick={() => setVisible(true)}
+          className="ml-3 mt-3"
+        />
         <Sidebar visible={visible} onHide={() => setVisible(false)}>
           <div className="min-h-screen flex relative lg:static surface-ground">
             <div
@@ -158,18 +163,25 @@ export default function SideBar() {
                               className="p-ripple p-3 flex align-items-center justify-content-between text-700 cursor-pointer"
                             >
                               <i className="pi pi-users"></i>
-                              <span className="font-medium" style={{marginLeft: "-80px"}}>Clientes</span>
+                              <span
+                                className="font-medium"
+                                style={{ marginLeft: "-80px" }}
+                              >
+                                Clientes
+                              </span>
                               <i className="pi pi-chevron-down"></i>
                               <Ripple />
                             </div>
                           </StyleClass>
-                          <ul className="list-none p-0 m-0 overflow-hidden">
+                          <ul className="list-none p-0 m-0 overflow-hidden ml-3">
                             <li>
-                              <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                              <Link to="/ListaCliente" className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                                 <i className="pi pi-list-check mr-2"></i>
-                                <span className="font-medium">Lista Clientes</span>
+                                <span className="font-medium">
+                                  Lista Clientes
+                                </span>
                                 <Ripple />
-                              </a>
+                              </Link>
                             </li>
                             <li>
                               <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">

@@ -12,6 +12,7 @@ import DashBoard from "./Pages/Dashboard";
 import Reserva from "./Pages/Reserva";
 import Pedidos from "./Pages/Pedidos";
 import Otros from "./Pages/Otros";
+import ListClientes from "./Pages/ListClientes";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Routes>
             <Route path="/dashboard" element={<DashBoard />}></Route>
             <Route exact path='/inicio' element={<Inicio />}/>
+            <Route exact path='/ListaCliente' element={<ListClientes />}/>
             <Route path="/reserva" element={<Reserva />}></Route>
             <Route path="/pedidos" element={<Pedidos />} />
             <Route path="/otros" element={<Otros />} />
