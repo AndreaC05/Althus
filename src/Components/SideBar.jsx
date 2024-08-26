@@ -6,7 +6,6 @@ import { Ripple } from "primereact/ripple";
 import { StyleClass } from "primereact/styleclass";
 
 import "../Style/SideBar.css";
-
 import Logo from "../assets/althuslogo.svg";
 
 export default function SideBar() {
@@ -15,6 +14,7 @@ export default function SideBar() {
   const btnRef2 = useRef(null);
   const btnRef3 = useRef(null);
   const btnRef4 = useRef(null);
+  const btnRef5 = useRef(null); // Reference for the Customers section within ORGANIZATION
 
   return (
     <>
@@ -145,16 +145,45 @@ export default function SideBar() {
                       </StyleClass>
                       <ul className="list-none p-0 m-0 overflow-hidden">
                         <li>
-                          <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
-                            <i className="pi pi-shopping-cart mr-2"></i>
-                            <span className="font-medium">Customers</span>
-                            <Ripple />
-                          </a>
+                          <StyleClass
+                            nodeRef={btnRef5}
+                            selector="@next"
+                            enterClassName="hidden"
+                            enterActiveClassName="slidedown"
+                            leaveToClassName="hidden"
+                            leaveActiveClassName="slideup"
+                          >
+                            <div
+                              ref={btnRef5}
+                              className="p-ripple p-3 flex align-items-center justify-content-between text-700 cursor-pointer"
+                            >
+                              <i className="pi pi-users"></i>
+                              <span className="font-medium" style={{marginLeft: "-80px"}}>Clientes</span>
+                              <i className="pi pi-chevron-down"></i>
+                              <Ripple />
+                            </div>
+                          </StyleClass>
+                          <ul className="list-none p-0 m-0 overflow-hidden">
+                            <li>
+                              <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                                <i className="pi pi-list-check mr-2"></i>
+                                <span className="font-medium">Lista Clientes</span>
+                                <Ripple />
+                              </a>
+                            </li>
+                            <li>
+                              <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                                <i className="pi pi-user-plus mr-2"></i>
+                                <span className="font-medium">Formulario</span>
+                                <Ripple />
+                              </a>
+                            </li>
+                          </ul>
                         </li>
                         <li>
                           <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                             <i className="pi pi-users mr-2"></i>
-                            <span className="font-medium">Employees</span>
+                            <span className="font-medium">Empleados</span>
                             <Ripple />
                           </a>
                         </li>
