@@ -1,4 +1,4 @@
-import SideBar from "../Components/Sidebar";
+import SideBar from "../Components/SideBar";
 
 export default function ListClientes() {
     return(

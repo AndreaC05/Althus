@@ -66,11 +66,11 @@ export default function SideBar() {
                       </StyleClass>
                       <ul className="list-none p-0 m-0 overflow-hidden">
                         <li>
-                          <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                          <Link to="/inicio" style={{textDecoration: "none"}} className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                             <i className="pi pi-home mr-2"></i>
-                            <span className="font-medium">Home</span>
+                            <span className="font-medium">Inicio</span>
                             <Ripple />
-                          </a>
+                          </Link>
                         </li>
                         <li>
                           <Link to="/productos" style={{textDecoration: "none"}} className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
@@ -80,18 +80,18 @@ export default function SideBar() {
                           </Link>
                         </li>
                         <li>
-                          <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                          <Link to="/reserva" style={{textDecoration: "none"}} className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                             <i className="pi pi-calendar mr-2"></i>
                             <span className="font-medium">Reserva</span>
                             <Ripple />
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                          <Link to="/pedidos" style={{textDecoration: "none"}} className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                             <i className="pi pi-check-square mr-2"></i>
                             <span className="font-medium">Pedidos</span>
                             <Ripple />
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </li>
