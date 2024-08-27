@@ -1,0 +1,14 @@
+.cliente_com {
+    border-radius: 30px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.header_com {
+    justify-content: center;
+    align-items: center;
+}
+
+.cliente_com .p-paginator {
+    margin-top: 15px;
+}

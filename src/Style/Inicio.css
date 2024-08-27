@@ -1,0 +1,29 @@
+body {
+    background-color: #d9ddfc;
+}
+
+.container_generarl_inicio {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container_estadisticas {
+    width: 100%;
+}
+
+.container_dos {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+}
+
+.container_clientes {
+    width: 45%;
+}
+
+.container_productos {
+    width: 45%;
+}

@@ -1,0 +1,12 @@
+.buscador {
+    margin-left: 160px;
+}
+
+.buscador .p-input-icon {
+    margin-top: -8px;
+}
+
+.buscador input{
+    border-radius: 30px;
+    padding: 10px 35px;
+}
