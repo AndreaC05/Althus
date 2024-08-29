@@ -1,0 +1,20 @@
+.dashboard_com {
+    border-radius: 30px;
+    padding: 20px;
+    background-color: #fff;
+    /* margin: 50px; */
+}
+
+.header_dash {
+    justify-content: space-between;
+}
+
+.letters_dash {
+    color: #212121;
+}
+
+.tortadash_com {
+    border-radius: 30px;
+    padding: 20px;
+    background-color: #fff;
+}

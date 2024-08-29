@@ -2,6 +2,14 @@ body {
     background-color: #d9ddfc;
 }
 
+.header h2{
+    font-size: 18px;
+    color: #64748B;
+    letter-spacing: 1px;
+    margin-top: 18px;
+    margin-left: 20px;
+}
+
 .container_generarl_inicio {
     width: 100%;
     height: 100%;
@@ -11,6 +19,16 @@ body {
 
 .container_estadisticas {
     width: 100%;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+.container_estadisticas .barras {
+    width: 70%;
+}
+
+.container_estadisticas .circule {
+    /* width: 20%; */
 }
 
 .container_dos {
@@ -21,9 +39,70 @@ body {
 }
 
 .container_clientes {
-    width: 45%;
+    width: 63%;
 }
 
 .container_productos {
-    width: 45%;
+    width: 35%;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+    .container_estadisticas {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container_estadisticas .barras {
+        width: 100%;
+    }
+
+    .container_estadisticas .circule {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .grafico_circule {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container_dos {
+        flex-direction: column;
+    }
+
+    .container_dos .container_clientes {
+        width: 100%;
+    }
+
+    .container_dos .container_productos {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .grafico_circle {
+        display: flex;
+        justify-content: center;
+        /* border: 1px solid black; */
+    }
+}
+
+@media (max-width: 585px) {
+    .buscador {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header_com {
+        flex-direction: column;
+    }
+
+    .search_cliente {
+        margin-top: 10px;
+    }
 }

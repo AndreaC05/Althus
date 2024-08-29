@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "primereact/button";
 import { DataView } from "primereact/dataview";
-import { Rating } from "primereact/rating";
+// import { Rating } from "primereact/rating";
 import { Tag } from "primereact/tag";
 import { classNames } from "primereact/utils";
 import { ProductService } from "./service/ProductService";
@@ -47,12 +47,12 @@ export default function ProductosCom() {
           <div className="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-4">
             <div className="flex flex-column align-items-center sm:align-items-start gap-3">
               <div className="text-2xl font-bold text-900">{product.name}</div>
-              <Rating value={product.rating} readOnly cancel={false}></Rating>
+              {/* <Rating value={product.rating} readOnly cancel={false}></Rating> */}
               <div className="flex align-items-center gap-3">
-                <span className="flex align-items-center gap-2">
+                {/* <span className="flex align-items-center gap-2">
                   <i className="pi pi-tag"></i>
                   <span className="font-semibold">{product.category}</span>
-                </span>
+                </span> */}
                 <Tag
                   value={product.inventoryStatus}
                   severity={getSeverity(product)}
@@ -86,6 +86,9 @@ export default function ProductosCom() {
   return (
     <>
       <div className="card productos_com">
+        <div className="letters_producto ml-4 mt-3">
+          <h3>Productos</h3>
+        </div>
         <DataView
           value={products}
           listTemplate={listTemplate}

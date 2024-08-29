@@ -5,6 +5,7 @@ import { Column } from "primereact/column";
 import { CustomerService } from "./service/CustomerService";
 import SearchCom from "./SearchCom";
 import "../Style/Cliente.css";
+import "../Style/Inicio.css";
 
 export default function ClientesCom() {
   const [customers, setCustomers] = useState([]);

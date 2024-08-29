@@ -1,5 +1,6 @@
 .container_sideBar Button{
-    background-color: #91D7E7;
+    /* background-color: #91D7E7; */
+    background-color: transparent;
     border: none;
     color: #2A415F;
     width: 40px;
