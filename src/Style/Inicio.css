@@ -27,10 +27,6 @@ body {
     width: 70%;
 }
 
-.container_estadisticas .circule {
-    /* width: 20%; */
-}
-
 .container_dos {
     display: flex;
     justify-content: space-around;
