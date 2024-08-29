@@ -14,16 +14,16 @@ export default function TortaDash() {
         {
           data: [540, 325, 702, 300],
           backgroundColor: [
+            documentStyle.getPropertyValue("--blue-700"),
             documentStyle.getPropertyValue("--blue-500"),
-            documentStyle.getPropertyValue("--yellow-500"),
-            documentStyle.getPropertyValue("--green-500"),
-            documentStyle.getPropertyValue("--grey-500"),
+            documentStyle.getPropertyValue("--blue-300"),
+            documentStyle.getPropertyValue("--blue-100"),
           ],
           hoverBackgroundColor: [
-            documentStyle.getPropertyValue("--blue-400"),
-            documentStyle.getPropertyValue("--yellow-400"),
-            documentStyle.getPropertyValue("--green-400"),
-            documentStyle.getPropertyValue("--grey-400"),
+            documentStyle.getPropertyValue("--blue-700"),
+            documentStyle.getPropertyValue("--blue-500"),
+            documentStyle.getPropertyValue("--blue-300"),
+            documentStyle.getPropertyValue("--blue-100"),
           ],
         },
       ],
