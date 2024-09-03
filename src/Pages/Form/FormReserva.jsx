@@ -2,7 +2,7 @@ import { useState } from "react";
 import SideBar from "../../Components/SideBar";
 import { Calendar } from "primereact/calendar";
 import { Dropdown } from "primereact/dropdown";
-import { InputNumber } from "primereact/inputnumber";
+// import { InputNumber } from "primereact/inputnumber";
 import { Button } from "primereact/button";
 import "../../Style/Formulario.css";
 
@@ -14,7 +14,12 @@ export default function FormReserva() {
   const cities = [
     { name: "Tigerengineering Colombia S.A.S. Sucursal del Peru", code: "NY" },
   ];
-  const [cantidad, setCantidad] = useState(1);
+  const [selectedMetodo, setSelectedMetodo] = useState(null);
+  const metodo = [
+    { name: "CONTADO", code: "NY" },
+    { name: "TRANSFERENCIA", code: "NY" }
+  ];
+//   const [cantidad, setCantidad] = useState(1);
 
   return (
     <>
@@ -29,11 +34,11 @@ export default function FormReserva() {
           <div className="sectiones flex">
             <div className="section">
               <label htmlFor="">Fecha</label>
-              <Calendar value={date} onChange={(e) => setDate(e.value)} className="w-18rem h-2rem"/>
+              <Calendar value={date} onChange={(e) => setDate(e.value)} className="w-17rem h-2rem"/>
             </div>
             <div className="section">
               <label htmlFor="">Fecha Entrega</label>
-              <Calendar value={date2} onChange={(e) => setDate2(e.value)} className="w-18rem h-2rem"/>
+              <Calendar value={date2} onChange={(e) => setDate2(e.value)} className="w-17rem h-2rem"/>
             </div>
           </div>
           <div className="section">
@@ -51,19 +56,21 @@ export default function FormReserva() {
           </div>
           <div className="sectiones flex">
             <div className="section">
-              <label htmlFor="">Cantidad</label>
-              <InputNumber
-                inputId="minmax"
-                value={cantidad}
-                onValueChange={(e) => setCantidad(e.value)}
-                min={0}
-                max={100}
-                className="w-18rem h-2rem"
-              />
+              <label htmlFor="">Método Pago</label>
+              <Dropdown
+              value={selectedMetodo}
+              onChange={(e) => setSelectedMetodo(e.value)}
+              options={metodo}
+              optionLabel="name"
+              placeholder="Seleccione el método pago"
+              className="w-full md:w-17rem p-2"
+              checkmark={true}
+              highlightOnSelect={false}
+            />
             </div>
             <div className="section">
               <label htmlFor="">Fecha Vencimiento</label>
-              <Calendar value={date3} onChange={(e) => setDate3(e.value)} className="w-18rem h-2rem"/>
+              <Calendar value={date3} onChange={(e) => setDate3(e.value)} className="w-17rem h-2rem"/>
             </div>
           </div>
 
