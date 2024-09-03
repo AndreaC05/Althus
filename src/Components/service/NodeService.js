@@ -1,5 +1,5 @@
-export class NodeService {
-    getTreeTableNodes() {
+export const NodeService = {
+    getTreeTableNodes: async () => {
         return Promise.resolve([
             {
                 key: "0",

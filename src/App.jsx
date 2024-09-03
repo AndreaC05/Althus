@@ -9,8 +9,9 @@ import "./App.css";
 import Inicio from "./Pages/Inicio";
 import Login from "./Pages/Login";
 import DashBoard from "./Pages/Dashboard";
-import Reserva from "./Pages/Reserva";
-import Pedidos from "./Pages/Pedidos";
+import ListReserva from "./Pages/ListReserva";
+import FormReserva from "./Pages/Form/FormReserva";
+import ListPedidos from "./Pages/ListPedidos";
 import Otros from "./Pages/Otros";
 import ListClientes from "./Pages/ListClientes";
 import Productos from "./Pages/Productos";
@@ -23,8 +24,9 @@ function App() {
             <Route path="/dashboard" element={<DashBoard />}></Route>
             <Route exact path='/inicio' element={<Inicio />}/>
             <Route exact path='/ListaCliente' element={<ListClientes />}/>
-            <Route path="/reserva" element={<Reserva />}></Route>
-            <Route path="/pedidos" element={<Pedidos />} />
+            <Route path="/ListaReserva" element={<ListReserva />}></Route>
+            <Route path="/FormularioReserva" element={<FormReserva />}></Route>
+            <Route path="/ListaPedido" element={<ListPedidos />} />
             <Route path="/otros" element={<Otros />} />
             <Route path="/productos" element={<Productos />} />
             <Route path="/" element={<Login />} />

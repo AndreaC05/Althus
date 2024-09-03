@@ -1,0 +1,44 @@
+.container_formulario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.formulario {
+    background-color: white;
+    width: 90%;
+    padding: 20px;
+    border-radius: 30px;
+    border: 1px solid #a2adff;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+}
+
+.container_formulario label {
+    margin-bottom: 5px;
+    margin-top: 15px;
+    color: rgb(106, 106, 106);
+    font-size: 15px;
+}
+
+.sectiones {
+    /* border: 1px solid black; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button_guardar {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.button_guardar button {
+    padding: 5px;
+}

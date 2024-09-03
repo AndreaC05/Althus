@@ -4,9 +4,11 @@ import { Column } from "primereact/column";
 import { InputText } from "primereact/inputtext";
 import { IconField } from "primereact/iconfield";
 import { InputIcon } from "primereact/inputicon";
-import "../../Style/Reserva.css";
+import SideBar from "../Components/SideBar";
+import "../Style/Reserva.css";
+import "../Style/Inicio.css";
 
-export default function TableReserva() {
+export default function ListReserva() {
   const [globalFilter, setGlobalFilter] = useState("");
 
   // Definir los datos directamente en el componente
@@ -49,6 +51,10 @@ export default function TableReserva() {
 
   return (
     <>
+    <div className="header flex align-items-center">
+        <SideBar />
+        <h2>Reservas</h2>
+    </div>
       <div className="card table_reserva">
         <TreeTable
           value={data}
@@ -61,6 +67,7 @@ export default function TableReserva() {
             header="N°"
             filter
             filterPlaceholder="Filtrar por N°"
+            className="p-2"
           />
           <Column
             field="fecha_reserva"

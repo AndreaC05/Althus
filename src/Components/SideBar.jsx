@@ -16,6 +16,8 @@ export default function SideBar() {
   const btnRef3 = useRef(null);
   const btnRef4 = useRef(null);
   const btnRef5 = useRef(null);
+  const btnRef6 = useRef(null); // Ref para Reserva
+  const btnRef7 = useRef(null); // Ref para Pedidos
 
   return (
     <>
@@ -87,27 +89,101 @@ export default function SideBar() {
                             <Ripple />
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            to="/reserva"
-                            style={{ textDecoration: "none" }}
-                            className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full"
+                        <li className="border-top-1 surface-border">
+                          <StyleClass
+                            nodeRef={btnRef6}
+                            selector="@next"
+                            enterClassName="hidden"
+                            enterActiveClassName="slidedown"
+                            leaveToClassName="hidden"
+                            leaveActiveClassName="slideup"
                           >
-                            <i className="pi pi-calendar mr-2"></i>
-                            <span className="font-medium">Reserva</span>
-                            <Ripple />
-                          </Link>
+                            <div
+                              ref={btnRef6}
+                              className="p-ripple p-3 flex align-items-center justify-content-between text-700 cursor-pointer"
+                            >
+                              <i className="pi pi-calendar"></i>
+                              <span
+                                className="font-medium"
+                                style={{ marginLeft: "-90px" }}
+                              >
+                                Reserva
+                              </span>
+                              <i className="pi pi-chevron-down"></i>
+                              <Ripple />
+                            </div>
+                          </StyleClass>
+                          <ul className="list-none p-0 m-0 overflow-hidden ml-3 listclientes">
+                            <li>
+                              <Link
+                                to="/ListaReserva"
+                                className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full"
+                              >
+                                <i className="pi pi-list mr-2"></i>
+                                <span className="font-medium">
+                                  Lista Reserva
+                                </span>
+                                <Ripple />
+                              </Link>
+                            </li>
+                            <li>
+                              <Link to="/FormularioReserva" className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                                <i className="pi pi-plus-circle mr-2"></i>
+                                <span className="font-medium">
+                                  Nueva Reserva
+                                </span>
+                                <Ripple />
+                              </Link>
+                            </li>
+                          </ul>
                         </li>
-                        <li>
-                          <Link
-                            to="/pedidos"
-                            style={{ textDecoration: "none" }}
-                            className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full"
+                        <li className="border-top-1 surface-border">
+                          <StyleClass
+                            nodeRef={btnRef7}
+                            selector="@next"
+                            enterClassName="hidden"
+                            enterActiveClassName="slidedown"
+                            leaveToClassName="hidden"
+                            leaveActiveClassName="slideup"
                           >
-                            <i className="pi pi-check-square mr-2"></i>
-                            <span className="font-medium">Pedidos</span>
-                            <Ripple />
-                          </Link>
+                            <div
+                              ref={btnRef7}
+                              className="p-ripple p-3 flex align-items-center justify-content-between text-700 cursor-pointer"
+                            >
+                              <i className="pi pi-shopping-cart"></i>
+                              <span
+                                className="font-medium"
+                                style={{ marginLeft: "-90px" }}
+                              >
+                                Pedidos
+                              </span>
+                              <i className="pi pi-chevron-down"></i>
+                              <Ripple />
+                            </div>
+                          </StyleClass>
+                          <ul className="list-none p-0 m-0 overflow-hidden ml-3 listclientes">
+                            <li>
+                              <Link
+                                to="/ListaPedido"
+                                className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full"
+                              >
+                                <i className="pi pi-list mr-2"></i>
+                                <span className="font-medium">
+                                  Lista Pedidos
+                                </span>
+                                <Ripple />
+                              </Link>
+                            </li>
+                            <li>
+                              <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                                <i className="pi pi-plus-circle mr-2"></i>
+                                <span className="font-medium">
+                                  Nuevo Pedido
+                                </span>
+                                <Ripple />
+                              </a>
+                            </li>
+                          </ul>
                         </li>
                       </ul>
                     </li>
