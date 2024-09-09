@@ -127,11 +127,24 @@ export default function SideBar() {
                               </Link>
                             </li>
                             <li>
-                              <Link to="/FormularioReserva" className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                              <Link
+                                to="/FormularioReserva"
+                                className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full"
+                              >
                                 <i className="pi pi-plus-circle mr-2"></i>
                                 <span className="font-medium">
                                   Nueva Reserva
                                 </span>
+                                <Ripple />
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                to="/cotizacion"
+                                className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full"
+                              >
+                                <i className="pi pi-file-check mr-2"></i>
+                                <span className="font-medium">Cotización</span>
                                 <Ripple />
                               </Link>
                             </li>
@@ -175,13 +188,16 @@ export default function SideBar() {
                               </Link>
                             </li>
                             <li>
-                              <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                              <Link
+                                to="/FormularioPedidos"
+                                className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full"
+                              >
                                 <i className="pi pi-plus-circle mr-2"></i>
                                 <span className="font-medium">
                                   Nuevo Pedido
                                 </span>
                                 <Ripple />
-                              </a>
+                              </Link>
                             </li>
                           </ul>
                         </li>
@@ -283,11 +299,11 @@ export default function SideBar() {
                               </Link>
                             </li>
                             <li>
-                              <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                              <Link to="/FormularioClientes" className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                                 <i className="pi pi-user-plus mr-2"></i>
                                 <span className="font-medium">Formulario</span>
                                 <Ripple />
-                              </a>
+                              </Link>
                             </li>
                           </ul>
                         </li>

@@ -1,10 +1,10 @@
 import { useState } from "react";
-import SideBar from "../../Components/SideBar";
+import SideBar from "../../../Components/SideBar";
 import { Calendar } from "primereact/calendar";
 import { Dropdown } from "primereact/dropdown";
 // import { InputNumber } from "primereact/inputnumber";
 import { Button } from "primereact/button";
-import "../../Style/Formulario.css";
+import "../../../Style/Formulario.css";
 
 export default function FormReserva() {
   const [date, setDate] = useState(null);

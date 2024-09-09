@@ -1,7 +1,12 @@
+import SideBar from "../Components/SideBar";
+
 export default function Dashboard() {
-    return(
-        <>
-            <h1>DashBoard</h1>
-        </>
-    );
+  return (
+    <>
+      <div className="header flex align-items-center">
+        <SideBar />
+        <h2>DashBoard</h2>
+      </div>
+    </>
+  );
 }

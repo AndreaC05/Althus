@@ -10,11 +10,14 @@ import Inicio from "./Pages/Inicio";
 import Login from "./Pages/Login";
 import DashBoard from "./Pages/Dashboard";
 import ListReserva from "./Pages/ListReserva";
-import FormReserva from "./Pages/Form/FormReserva";
+import FormReserva from "./Pages/Form/Reservas/FormReserva";
+import FormPedidos from "./Pages/Form/Pedidos/FormPedidos";
 import ListPedidos from "./Pages/ListPedidos";
 import Otros from "./Pages/Otros";
 import ListClientes from "./Pages/ListClientes";
+import FormClientes from "./Pages/Form/Clientes/FormClientes";
 import Productos from "./Pages/Productos";
+import Cotizacion from "./Pages/Cotizacion";
 
 function App() {
   return (
@@ -24,9 +27,12 @@ function App() {
             <Route path="/dashboard" element={<DashBoard />}></Route>
             <Route exact path='/inicio' element={<Inicio />}/>
             <Route exact path='/ListaCliente' element={<ListClientes />}/>
+            <Route path="/FormularioClientes" element={<FormClientes />}></Route>
             <Route path="/ListaReserva" element={<ListReserva />}></Route>
             <Route path="/FormularioReserva" element={<FormReserva />}></Route>
+            <Route path="/cotizacion" element={<Cotizacion />} />
             <Route path="/ListaPedido" element={<ListPedidos />} />
+            <Route path="/FormularioPedidos" element={<FormPedidos />}></Route>
             <Route path="/otros" element={<Otros />} />
             <Route path="/productos" element={<Productos />} />
             <Route path="/" element={<Login />} />
