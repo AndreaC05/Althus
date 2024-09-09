@@ -6,6 +6,8 @@ import { Dropdown } from "primereact/dropdown";
 import { Button } from "primereact/button";
 import "../../../Style/Formulario.css";
 
+import FormDetalle from "../Detalle/FormDetalle";
+
 export default function FormReserva() {
   const [date, setDate] = useState(null);
   const [date2, setDate2] = useState(null);
@@ -78,8 +80,8 @@ export default function FormReserva() {
             <Button label="Guardar" />
           </div>
         </div>
-        <div className="formulario_detalle formulario">
-          <h3>Agregar Detalle</h3>
+        <div className="formulario_detalle formulario ml-2">
+          <FormDetalle />
         </div>
       </div>
     </>

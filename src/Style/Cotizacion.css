@@ -1,0 +1,28 @@
+.container_cotizacion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cot {
+    background-color: white;
+    width: 90%;
+    border-radius: 63px;
+}
+
+.container_formulario {
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario_cot {
+    width: 90%;
+}
+
+.section_cot {
+    justify-content: space-around;
+}
