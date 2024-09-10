@@ -4,3 +4,21 @@
     padding: 20px;
     margin: 10px;
 }
+
+.table_reserva .p-treetable-header {
+    padding: 10px;
+    background-color: transparent;
+}
+
+.table_reserva .p-icon-field-left {
+    /* padding: 8px; */
+}
+
+.table_reserva .p-inputtext {
+    height: 2rem;
+    padding: 10px 30px;
+}
+
+.table_reserva .p-input-icon {
+    margin-top: -6px;
+}

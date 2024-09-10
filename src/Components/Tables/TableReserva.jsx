@@ -32,7 +32,7 @@ export default function TableReserva() {
 
   const getHeader = () => {
     return (
-      <div className="flex justify-content-end">
+      <div className="flex justify-content-end search-reserva">
         <IconField iconPosition="left">
           <InputIcon className="pi pi-search" />
           <InputText
@@ -59,32 +59,32 @@ export default function TableReserva() {
           <Column
             field="id"
             header="N°"
-            filter
-            filterPlaceholder="Filtrar por N°"
+            // filter
+            // filterPlaceholder="Filtrar por N°"
           />
           <Column
             field="fecha_reserva"
             header="Fecha Reserva"
-            filter
-            filterPlaceholder="Filtrar por fecha de reserva"
+            // filter
+            // filterPlaceholder="Filtrar por fecha de reserva"
           />
           <Column
             field="cliente"
             header="Cliente"
-            filter
-            filterPlaceholder="Filtrar por cliente"
+            // filter
+            // filterPlaceholder="Filtrar por cliente"
           />
           <Column
             field="fecha_entrega_reserva"
             header="Fecha Entrega"
-            filter
-            filterPlaceholder="Filtrar por fecha de entrega"
+            // filter
+            // filterPlaceholder="Filtrar por fecha de entrega"
           />
           <Column
             field="metodo_pago"
             header="Método Pago"
-            filter
-            filterPlaceholder="Filtrar por método de pago"
+            // filter
+            // filterPlaceholder="Filtrar por método de pago"
           />
           <Column
             field="detalle"
