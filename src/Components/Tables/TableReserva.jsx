@@ -27,6 +27,14 @@ export default function TableReserva() {
       metodo_pago: "CONTADO",
       detalle: "Ver detalle",
     },
+    {
+      id: 2,
+      fecha_reserva: "2024-09-03",
+      cliente: "María López",
+      fecha_entrega_reserva: "2024-09-09",
+      metodo_pago: "CONTADO",
+      detalle: "Ver detalle",
+    },
     // Puedes añadir más objetos según sea necesario
   ];
 
@@ -59,32 +67,23 @@ export default function TableReserva() {
           <Column
             field="id"
             header="N°"
-            // filter
-            // filterPlaceholder="Filtrar por N°"
+            className=""
           />
           <Column
             field="fecha_reserva"
             header="Fecha Reserva"
-            // filter
-            // filterPlaceholder="Filtrar por fecha de reserva"
           />
           <Column
             field="cliente"
             header="Cliente"
-            // filter
-            // filterPlaceholder="Filtrar por cliente"
           />
           <Column
             field="fecha_entrega_reserva"
             header="Fecha Entrega"
-            // filter
-            // filterPlaceholder="Filtrar por fecha de entrega"
           />
           <Column
             field="metodo_pago"
             header="Método Pago"
-            // filter
-            // filterPlaceholder="Filtrar por método de pago"
           />
           <Column
             field="detalle"

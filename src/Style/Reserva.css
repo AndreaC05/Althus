@@ -22,3 +22,7 @@
 .table_reserva .p-input-icon {
     margin-top: -6px;
 }
+
+.p-filter-column {
+    display: none;
+}
