@@ -84,12 +84,12 @@ export default function ListReserva() {
           tableStyle={{ minWidth: "50rem" }}
           className="table_reserva_datos"
         >
-          <Column field="id" header="N°" className="p-2" style={{ width: "5%" }}/>
-          <Column field="cliente" header="Cliente" className="p-3" style={{ width: "30%" }}/>
+          <Column field="id" header="Itém" className="p-2" style={{ width: "5%" }}/>
+          <Column field="cliente" header="Cliente" className="p-3" style={{ width: "25%" }}/>
           <Column
             field="fecha"
             header="Fechas"
-            style={{ width: "10%" }}
+            style={{ width: "5%" }}
             body={(rowData) => (
               <Button
                 icon="pi pi-calendar"
@@ -98,11 +98,11 @@ export default function ListReserva() {
               />
             )}
           />
-          <Column field="metodo_pago" header="Método Pago" style={{ width: "15%" }}/>
+          <Column field="metodo_pago" header="Método Pago" style={{ width: "12%" }}/>
           <Column
             header="Ver Detalle"
             className="column"
-            style={{ width: "8%" }}
+            style={{ width: "5%" }}
             body={(rowData) => (
               <Button
                 icon="pi pi-info-circle"
@@ -111,6 +111,7 @@ export default function ListReserva() {
               />
             )}
           />
+          <Column field="" header="Cotizar" style={{ width: "8%" }}/>
           <Column field="" header="Acción" style={{ width: "8%" }}/>
         </TreeTable>
       </div>
