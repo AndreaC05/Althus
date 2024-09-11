@@ -4,32 +4,35 @@ import { Column } from "primereact/column";
 import { InputText } from "primereact/inputtext";
 import { IconField } from "primereact/iconfield";
 import { InputIcon } from "primereact/inputicon";
+import { Button } from "primereact/button";
+import { Dialog } from "primereact/dialog";
 import SideBar from "../Components/SideBar";
+// import AccionesReserva from "../Components/AccionesReserva";
 import "../Style/Reserva.css";
 import "../Style/Inicio.css";
 
 export default function ListReserva() {
   const [globalFilter, setGlobalFilter] = useState("");
+  const [detalleVisible, setDetalleVisible] = useState(false);
+  const [calendarioVisible, setCalendarioVisible] = useState(false);
+  const [reservaSeleccionada, setReservaSeleccionada] = useState(null);
+  const [fechaSeleccionada, setFechaSeleccionada] = useState(null);
 
-  // Definir los datos directamente en el componente
-  const data = [
+  // Datos de ejemplo
+  const reservas = [
     {
-      id: 1,
-      fecha_reserva: "2024-09-04",
-      cliente: "Juan Pérez",
-      fecha_entrega_reserva: "2024-09-10",
-      metodo_pago: "TRANSFERENCIA",
-      detalle: "Ver detalle",
+      id: "1",
+      cliente: "Cliente A",
+      fecha: new Date(2024, 8, 15), // Fecha de ejemplo
+      metodo_pago: "Tarjeta de Crédito",
     },
     {
-      id: 2,
-      fecha_reserva: "2024-09-03",
-      cliente: "María López",
-      fecha_entrega_reserva: "2024-09-09",
-      metodo_pago: "CONTADO",
-      detalle: "Ver detalle",
+      id: "2",
+      cliente: "Cliente B",
+      fecha: new Date(2024, 8, 20), // Fecha de ejemplo
+      metodo_pago: "Efectivo",
     },
-    // Puedes añadir más objetos según sea necesario
+    // Agrega más datos según sea necesario
   ];
 
   const getHeader = () => {
@@ -47,63 +50,105 @@ export default function ListReserva() {
     );
   };
 
+  const verDetalle = (rowData) => {
+    setReservaSeleccionada(rowData);
+    setDetalleVisible(true);
+  };
+
+  const verCalendario = (fecha) => {
+    setFechaSeleccionada(fecha);
+    setCalendarioVisible(true);
+  };
+
+  const hideDetalleDialog = () => {
+    setDetalleVisible(false);
+  };
+
+  const hideCalendarioDialog = () => {
+    setCalendarioVisible(false);
+  };
+
   let header = getHeader();
 
   return (
     <>
-    <div className="header flex align-items-center">
+      <div className="header flex align-items-center">
         <SideBar />
         <h2>Reservas</h2>
-    </div>
+      </div>
       <div className="card table_reserva">
         <TreeTable
-          value={data}
+          value={reservas} // Pasar los datos aquí
           globalFilter={globalFilter}
           header={header}
           tableStyle={{ minWidth: "50rem" }}
+          className="table_reserva_datos"
         >
+          <Column field="id" header="N°" className="p-2" style={{ width: "5%" }}/>
+          <Column field="cliente" header="Cliente" className="p-3" style={{ width: "30%" }}/>
           <Column
-            field="id"
-            header="N°"
-            filter
-            filterPlaceholder="Filtrar por N°"
-            className="p-2"
-          />
-          <Column
-            field="fecha_reserva"
-            header="Fecha Reserva"
-            filter
-            filterPlaceholder="Filtrar por fecha de reserva"
-          />
-          <Column
-            field="cliente"
-            header="Cliente"
-            filter
-            filterPlaceholder="Filtrar por cliente"
-          />
-          <Column
-            field="fecha_entrega_reserva"
-            header="Fecha Entrega"
-            filter
-            filterPlaceholder="Filtrar por fecha de entrega"
-          />
-          <Column
-            field="metodo_pago"
-            header="Método Pago"
-            filter
-            filterPlaceholder="Filtrar por método de pago"
-          />
-          <Column
-            field="detalle"
-            header="Ver Detalle"
+            field="fecha"
+            header="Fechas"
+            style={{ width: "10%" }}
             body={(rowData) => (
-              <button onClick={() => alert(`Detalle de ${rowData.cliente}`)}>
-                {rowData.detalle}
-              </button>
+              <Button
+                icon="pi pi-calendar"
+                onClick={() => verCalendario(rowData.fecha)}
+                className="btn-ver-calendario"
+              />
             )}
           />
+          <Column field="metodo_pago" header="Método Pago" style={{ width: "15%" }}/>
+          <Column
+            header="Ver Detalle"
+            className="column"
+            style={{ width: "8%" }}
+            body={(rowData) => (
+              <Button
+                icon="pi pi-info-circle"
+                onClick={() => verDetalle(rowData)}
+                className="btn-ver-detalle"
+              />
+            )}
+          />
+          <Column field="" header="Acción" style={{ width: "8%" }}/>
         </TreeTable>
       </div>
+
+      {/* Dialog de Detalle */}
+      <Dialog
+        header="Detalles de la Reserva"
+        visible={detalleVisible}
+        style={{ width: "50vw" }}
+        modal
+        onHide={hideDetalleDialog}
+      >
+        {reservaSeleccionada ? (
+          <div>
+            <p><strong>Número de Reserva:</strong> {reservaSeleccionada.id}</p>
+            <p><strong>Cliente:</strong> {reservaSeleccionada.cliente}</p>
+            <p><strong>Método de Pago:</strong> {reservaSeleccionada.metodo_pago}</p>
+            {/* Puedes agregar más detalles según tu estructura de datos */}
+          </div>
+        ) : null}
+      </Dialog>
+
+      {/* Dialog de Calendario */}
+      <Dialog
+        header="Fechas"
+        visible={calendarioVisible}
+        style={{ width: "30vw" }}
+        modal
+        onHide={hideCalendarioDialog}
+      >
+        {fechaSeleccionada ? (
+          <div>
+            <p><strong>F.R.:</strong></p>
+            <p><strong>F.E.:</strong></p>
+            <p><strong>F.V.:</strong></p>
+          </div>
+        ) : null}
+      </Dialog>
     </>
   );
 }

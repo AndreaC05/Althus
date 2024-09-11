@@ -8,6 +8,12 @@
 .table_reserva .p-treetable-header {
     padding: 10px;
     background-color: transparent;
+    border: none;
+}
+
+th {
+    background-color: transparent;
+    border-color: blue;
 }
 
 .table_reserva .p-icon-field-left {
@@ -25,4 +31,16 @@
 
 .p-filter-column {
     display: none;
+}
+
+.btn-ver-calendario {
+    background-color: transparent;
+    color: rgb(151, 151, 151);
+    border: none;
+}
+
+.btn-ver-detalle {
+    background-color: transparent;
+    color: blue;
+    border: none;
 }

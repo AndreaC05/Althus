@@ -9,35 +9,6 @@ import "../../Style/Reserva.css";
 export default function TableReserva() {
   const [globalFilter, setGlobalFilter] = useState("");
 
-  // Definir los datos directamente en el componente
-  const data = [
-    {
-      id: 1,
-      fecha_reserva: "2024-09-04",
-      cliente: "Juan Pérez",
-      fecha_entrega_reserva: "2024-09-10",
-      metodo_pago: "TRANSFERENCIA",
-      detalle: "Ver detalle",
-    },
-    {
-      id: 2,
-      fecha_reserva: "2024-09-03",
-      cliente: "María López",
-      fecha_entrega_reserva: "2024-09-09",
-      metodo_pago: "CONTADO",
-      detalle: "Ver detalle",
-    },
-    {
-      id: 2,
-      fecha_reserva: "2024-09-03",
-      cliente: "María López",
-      fecha_entrega_reserva: "2024-09-09",
-      metodo_pago: "CONTADO",
-      detalle: "Ver detalle",
-    },
-    // Puedes añadir más objetos según sea necesario
-  ];
-
   const getHeader = () => {
     return (
       <div className="flex justify-content-end search-reserva">
@@ -59,7 +30,7 @@ export default function TableReserva() {
     <>
       <div className="card table_reserva">
         <TreeTable
-          value={data}
+          value=""
           globalFilter={globalFilter}
           header={header}
           tableStyle={{ minWidth: "50rem" }}
