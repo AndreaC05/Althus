@@ -24,10 +24,6 @@ td {
     text-align: center;
 }
 
-.table_reserva .p-icon-field-left {
-    /* padding: 8px; */
-}
-
 .table_reserva .p-inputtext {
     height: 2rem;
     padding: 10px 30px;
