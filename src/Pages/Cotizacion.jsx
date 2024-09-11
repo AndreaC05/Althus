@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SideBar from "../Components/SideBar";
+import TableCotizar from "../Components/Tables/TableCotizar";
 import "../Style/Cotizacion.css";
 import "../Style/Formulario.css";
 import Logo from "../assets/althuslogo.svg";
@@ -119,6 +120,9 @@ export default function Cotizacion() {
             <Button label="Generar Cotización" />
           </div>
         </div>
+      </div>
+      <div className="table_cotizar">
+        <TableCotizar />
       </div>
     </>
   );

@@ -5,7 +5,7 @@
     align-items: center;
 }
 
-.cot {
+.cot, .container_table_cotizar {
     background-color: white;
     width: 90%;
     border-radius: 63px;
@@ -25,4 +25,15 @@
 
 .section_cot {
     justify-content: space-around;
+}
+
+.table_cotizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_table_cotizar .p-column-header-content {
+    padding: 10px;
+    text-align: center;
 }
