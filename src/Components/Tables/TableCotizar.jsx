@@ -4,7 +4,7 @@ import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 
 export default function TableCotizar() {
-  const [products, setProducts] = useState([]);
+  const [products, ] = useState([]);
 
   return (
     <>
