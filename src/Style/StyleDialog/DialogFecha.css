@@ -1,0 +1,17 @@
+.fecha {
+    /* border: 1px solid #000000; */
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fecha label {
+    font-size: 15px;
+    color: rgb(72, 72, 138);
+    font-weight: 600;             
+    /* negrita font-weight: */
+    /* tamaño  font-size: */
+    /* margin-right: 10px; */
+}
+

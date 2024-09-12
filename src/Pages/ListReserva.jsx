@@ -7,6 +7,7 @@ import { InputIcon } from "primereact/inputicon";
 import { Button } from "primereact/button";
 import { Dialog } from "primereact/dialog";
 import SideBar from "../Components/SideBar";
+import DialogFechas from "../Components/Dialog/DialogFechas";
 // import AccionesReserva from "../Components/AccionesReserva";
 import "../Style/Reserva.css";
 import "../Style/Inicio.css";
@@ -143,11 +144,7 @@ export default function ListReserva() {
         onHide={hideCalendarioDialog}
       >
         {fechaSeleccionada ? (
-          <div>
-            <p><strong>F.R.:</strong></p>
-            <p><strong>F.E.:</strong></p>
-            <p><strong>F.V.:</strong></p>
-          </div>
+          <DialogFechas />
         ) : null}
       </Dialog>
     </>
