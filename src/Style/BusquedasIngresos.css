@@ -1,0 +1,8 @@
+.contenedor_ingresos_busquedas {
+    background-color: #bdf6fc;
+    border: 1px solid #015e68;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
