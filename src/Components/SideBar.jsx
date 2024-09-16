@@ -291,7 +291,7 @@ export default function SideBar() {
                           <ul className="list-none p-0 m-0 overflow-hidden ml-3 listclientes">
                             <li>
                               <Link
-                                to="/ListaEmpleados"
+                                to="/FormularioIngresosProductos"
                                 className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full"
                               >
                                 <i className="pi pi-plus"></i>
@@ -303,7 +303,7 @@ export default function SideBar() {
                             </li>
                             <li>
                               <Link
-                                to="/FormularioTrabajadores"
+                                to="/ListIngresos"
                                 className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full"
                               >
                                 <i className="pi pi-th-large mr-2"></i>

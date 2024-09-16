@@ -20,7 +20,7 @@ import ListReserva from "./Pages/Listas/ListReserva";
 import ListClientes from "./Pages/Listas/ListClientes";
 import ListEmpleados from "./Pages/Listas/ListEmpleados";
 import ListContacto from "./Pages/Listas/ListContacto";
-import ListProductos from "./Pages/Listas/ListProductos";
+import ListProductos from "./Pages/Listas/ListProductos.jsx";
 
 // Formularios
 
