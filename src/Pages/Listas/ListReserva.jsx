@@ -6,11 +6,11 @@ import { IconField } from "primereact/iconfield";
 import { InputIcon } from "primereact/inputicon";
 import { Button } from "primereact/button";
 import { Dialog } from "primereact/dialog";
-import SideBar from "../Components/SideBar";
-import DialogFechas from "../Components/Dialog/DialogFechas";
+import SideBar from "../../Components/SideBar";
+import DialogFechas from "../../Components/Dialog/DialogFechas";
 // import AccionesReserva from "../Components/AccionesReserva";
-import "../Style/Reserva.css";
-import "../Style/Inicio.css";
+import "../../Style/Reserva.css";
+import "../../Style/Inicio.css";
 
 export default function ListReserva() {
   const [globalFilter, setGlobalFilter] = useState("");

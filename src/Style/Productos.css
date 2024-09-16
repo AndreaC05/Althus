@@ -3,3 +3,11 @@
     background-color: #fff;
     border-radius: 30px;
 }
+
+.container_productos_principal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}

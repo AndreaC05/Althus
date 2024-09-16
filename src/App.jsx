@@ -9,33 +9,56 @@ import "./App.css";
 import Inicio from "./Pages/Inicio";
 import Login from "./Pages/Login";
 import DashBoard from "./Pages/Dashboard";
-import ListReserva from "./Pages/ListReserva";
-import FormReserva from "./Pages/Form/Reservas/FormReserva";
-import FormPedidos from "./Pages/Form/Pedidos/FormPedidos";
-import ListPedidos from "./Pages/ListPedidos";
 import Otros from "./Pages/Otros";
-import ListClientes from "./Pages/ListClientes";
-import FormClientes from "./Pages/Form/Clientes/FormClientes";
 import Productos from "./Pages/Productos";
 import Cotizacion from "./Pages/Cotizacion";
+
+// Listas archivos
+
+import ListPedidos from "./Pages/Listas/ListPedidos";
+import ListReserva from "./Pages/Listas/ListReserva";
+import ListClientes from "./Pages/Listas/ListClientes";
+import ListEmpleados from "./Pages/Listas/ListEmpleados";
+import ListContacto from "./Pages/Listas/ListContacto";
+
+// Formularios
+
+import FormReserva from "./Pages/Form/Reservas/FormReserva";
+import FormPedidos from "./Pages/Form/Pedidos/FormPedidos";
+import FormClientes from "./Pages/Form/Clientes/FormClientes";
+import FormEmpleados from "./Pages/Form/Trabajadores/FormEmpleados";
+import FormContacto from "./Pages/Form/Contacto/FormContacto";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
+            <Route path="/" element={<Login />} />
             <Route path="/dashboard" element={<DashBoard />}></Route>
             <Route exact path='/inicio' element={<Inicio />}/>
-            <Route exact path='/ListaCliente' element={<ListClientes />}/>
-            <Route path="/FormularioClientes" element={<FormClientes />}></Route>
-            <Route path="/ListaReserva" element={<ListReserva />}></Route>
-            <Route path="/FormularioReserva" element={<FormReserva />}></Route>
             <Route path="/cotizacion" element={<Cotizacion />} />
-            <Route path="/ListaPedido" element={<ListPedidos />} />
-            <Route path="/FormularioPedidos" element={<FormPedidos />}></Route>
             <Route path="/otros" element={<Otros />} />
             <Route path="/productos" element={<Productos />} />
-            <Route path="/" element={<Login />} />
+            
+            
+            {/* Listas archivos */}
+
+            <Route exact path='/ListaCliente' element={<ListClientes />}/>
+            <Route path="/ListaReserva" element={<ListReserva />}></Route>
+            <Route path="/ListaPedido" element={<ListPedidos />} />
+            <Route path="/ListaEmpleados" element={<ListEmpleados />} />
+            <Route path="/ListaContacto" element={<ListContacto />} />
+
+            {/* Formularios */}
+
+            <Route path="/FormularioClientes" element={<FormClientes />}></Route>
+            <Route path="/FormularioReserva" element={<FormReserva />}></Route>
+            <Route path="/FormularioPedidos" element={<FormPedidos />}></Route>
+            <Route path="/FormularioTrabajadores" element={<FormEmpleados />}></Route>
+            <Route path="/FormularioContactos" element={<FormContacto />}></Route>
+
+            
           {/* <Route path="/registro" element={<RegistroLogin />} /> */}
         </Routes>
       </BrowserRouter>

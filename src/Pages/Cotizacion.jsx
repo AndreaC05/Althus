@@ -24,8 +24,9 @@ export default function Cotizacion() {
               <img src={Logo} alt="Logo Althus" />
             </div>
           </div>
+          <hr className="divisor mt-5"/>
           <div className="container_formulario">
-            <div className="formulario_cot mt-5">
+            <div className="formulario_cot mt-2">
               <div className="sectiones">
                 <div className="section">
                   <label htmlFor="">Cliente</label>

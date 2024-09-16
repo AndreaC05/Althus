@@ -1,5 +1,5 @@
-import SideBar from "../Components/SideBar";
-import "../Style/Inicio.css";
+import SideBar from "../../Components/SideBar";
+import "../../Style/Inicio.css";
 
 export default function ListPedidos() {
     return(
