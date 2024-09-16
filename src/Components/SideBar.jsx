@@ -21,6 +21,7 @@ export default function SideBar() {
   const btnRef8 = useRef(null); //ref para trabajadores
   const btnRef9 = useRef(null); //ref para contactos
   const btnRef10 = useRef(null); //ref para el kardex
+  const btnRef11 = useRef(null);
 
   return (
     <>
@@ -242,6 +243,41 @@ export default function SideBar() {
                             <span className="font-medium">Dashboard</span>
                             <Ripple />
                           </Link>
+                        </li>
+                      </ul>
+                    </li>
+                    <li className="border-top-1 surface-border">
+                      <StyleClass
+                        nodeRef={btnRef11}
+                        selector="@next"
+                        enterClassName="hidden"
+                        enterActiveClassName="slidedown"
+                        leaveToClassName="hidden"
+                        leaveActiveClassName="slideup"
+                      >
+                        <div
+                          ref={btnRef11}
+                          className="p-ripple p-3 flex align-items-center justify-content-between text-600 cursor-pointer"
+                        >
+                          <span className="font-medium">PLANTA</span>
+                          <i className="pi pi-chevron-down"></i>
+                          <Ripple />
+                        </div>
+                      </StyleClass>
+                      <ul className="list-none p-0 m-0 overflow-hidden">
+                        <li>
+                          <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                            <i className="pi pi-user mr-2"></i>
+                            <span className="font-medium">Account</span>
+                            <Ripple />
+                          </a>
+                        </li>
+                        <li>
+                          <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                            <i className="pi pi-cog mr-2"></i>
+                            <span className="font-medium">Preferences</span>
+                            <Ripple />
+                          </a>
                         </li>
                       </ul>
                     </li>
