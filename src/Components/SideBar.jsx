@@ -20,6 +20,7 @@ export default function SideBar() {
   const btnRef7 = useRef(null); // Ref para Pedidos
   const btnRef8 = useRef(null); //ref para trabajadores
   const btnRef9 = useRef(null); //ref para contactos
+  const btnRef10 = useRef(null); //ref para el kardex
 
   return (
     <>
@@ -263,6 +264,55 @@ export default function SideBar() {
                         </div>
                       </StyleClass>
                       <ul className="list-none p-0 m-0 overflow-hidden">
+                      <li>
+                          <StyleClass
+                            nodeRef={btnRef10}
+                            selector="@next"
+                            enterClassName="hidden"
+                            enterActiveClassName="slidedown"
+                            leaveToClassName="hidden"
+                            leaveActiveClassName="slideup"
+                          >
+                            <div
+                              ref={btnRef10}
+                              className="p-ripple p-3 flex align-items-center justify-content-between text-700 cursor-pointer"
+                            >
+                              <i className="pi pi-box"></i>
+                              <span
+                                className="font-medium"
+                                style={{ marginLeft: "-90px" }}
+                              >
+                                Kardex
+                              </span>
+                              <i className="pi pi-chevron-down"></i>
+                              <Ripple />
+                            </div>
+                          </StyleClass>
+                          <ul className="list-none p-0 m-0 overflow-hidden ml-3 listclientes">
+                            <li>
+                              <Link
+                                to="/ListaEmpleados"
+                                className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full"
+                              >
+                                <i className="pi pi-plus"></i>
+                                <span className="font-medium">
+                                  Agregar Producto
+                                </span>
+                                <Ripple />
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                to="/FormularioTrabajadores"
+                                className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full"
+                              >
+                                <i className="pi pi-th-large mr-2"></i>
+                                <span className="font-medium">Gestionar Inventario</span>
+                                <Ripple />
+                              </Link>
+                            </li>
+                          </ul>
+                        </li>
                         <li>
                           <StyleClass
                             nodeRef={btnRef5}
@@ -453,10 +503,10 @@ export default function SideBar() {
                   <hr className="mb-3 mx-3 border-top-1 border-none surface-border" />
                   <a className="m-3 flex align-items-center cursor-pointer p-3 gap-2 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
                     <Avatar
-                      image="https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png"
+                      image="https://cdn-icons-png.flaticon.com/512/9385/9385289.png"
                       shape="circle"
                     />
-                    <span className="font-bold">Amy Elsner</span>
+                    <span className="font-bold">Administrador</span>
                   </a>
                 </div>
               </div>

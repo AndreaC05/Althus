@@ -20,6 +20,7 @@ import ListReserva from "./Pages/Listas/ListReserva";
 import ListClientes from "./Pages/Listas/ListClientes";
 import ListEmpleados from "./Pages/Listas/ListEmpleados";
 import ListContacto from "./Pages/Listas/ListContacto";
+import ListProductos from "./Pages/Listas/ListProductos";
 
 // Formularios
 
@@ -28,6 +29,7 @@ import FormPedidos from "./Pages/Form/Pedidos/FormPedidos";
 import FormClientes from "./Pages/Form/Clientes/FormClientes";
 import FormEmpleados from "./Pages/Form/Trabajadores/FormEmpleados";
 import FormContacto from "./Pages/Form/Contacto/FormContacto";
+import FormProductos from "./Pages/Form/Productos/FormProductos";
 
 function App() {
   return (
@@ -49,6 +51,7 @@ function App() {
             <Route path="/ListaPedido" element={<ListPedidos />} />
             <Route path="/ListaEmpleados" element={<ListEmpleados />} />
             <Route path="/ListaContacto" element={<ListContacto />} />
+            <Route path="/ListIngresos" element={<ListProductos />} />
 
             {/* Formularios */}
 
@@ -57,6 +60,7 @@ function App() {
             <Route path="/FormularioPedidos" element={<FormPedidos />}></Route>
             <Route path="/FormularioTrabajadores" element={<FormEmpleados />}></Route>
             <Route path="/FormularioContactos" element={<FormContacto />}></Route>
+            <Route path="/FormularioIngresosProductos" element={<FormProductos />}></Route>
 
             
           {/* <Route path="/registro" element={<RegistroLogin />} /> */}
