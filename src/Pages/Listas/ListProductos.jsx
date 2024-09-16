@@ -87,6 +87,7 @@ export default function ListProductos() {
                 body={priceBodyTemplate}
               ></Column>
               <Column header="Status" body={statusBodyTemplate}></Column>
+              <Column field="fecha_entrada" header="Fecha"></Column>
             </DataTable>
           </div>
         </div>
