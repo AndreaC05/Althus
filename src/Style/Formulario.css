@@ -49,3 +49,11 @@
     background-color: #6778f9;
     color: white;
 }
+
+.section .p-fileupload-buttonbar {
+    padding: 10px;
+}
+
+.section .p-fileupload-content {
+    padding: 15px;
+}
