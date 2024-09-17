@@ -22,6 +22,9 @@ export default function SideBar() {
   const btnRef9 = useRef(null); //ref para contactos
   const btnRef10 = useRef(null); //ref para el kardex
   const btnRef11 = useRef(null);
+  const btnRef12 = useRef(null); //ref para pedidos planta
+  // const btnRef13 = useRef(null);
+  
 
   return (
     <>
@@ -264,20 +267,20 @@ export default function SideBar() {
                           <Ripple />
                         </div>
                       </StyleClass>
-                      <ul className="list-none p-0 m-0 overflow-hidden">
+                      <ul className="list-none p-0 m-0 overflow-hidden listclientes">
                         <li>
-                          <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
-                            <i className="pi pi-user mr-2"></i>
-                            <span className="font-medium">Account</span>
+                          <Link to="/ListPedidosPlanta" className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                            <i className="pi pi-objects-column mr-2"></i>
+                            <span className="font-medium">Lista Pedidos</span>
                             <Ripple />
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
-                            <i className="pi pi-cog mr-2"></i>
-                            <span className="font-medium">Preferences</span>
+                          <Link to="/FormularioPedidosPlanta" className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                            <i className="pi pi-file-edit mr-2"></i>
+                            <span className="font-medium">Formulario</span>
                             <Ripple />
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </li>

@@ -21,6 +21,7 @@ import ListClientes from "./Pages/Listas/ListClientes";
 import ListEmpleados from "./Pages/Listas/ListEmpleados";
 import ListContacto from "./Pages/Listas/ListContacto";
 import ListProductos from "./Pages/Listas/ListProductos.jsx";
+import ListPedidoPlanta from "./Pages/Listas/ListPedidoPlanta.jsx";
 
 // Formularios
 
@@ -30,6 +31,7 @@ import FormClientes from "./Pages/Form/Clientes/FormClientes";
 import FormEmpleados from "./Pages/Form/Trabajadores/FormEmpleados";
 import FormContacto from "./Pages/Form/Contacto/FormContacto";
 import FormProductos from "./Pages/Form/Productos/FormProductos";
+import FormPedidosPlanta from "./Pages/Form/PedidosPlanta/FormPedidosPlanta.jsx";
 
 function App() {
   return (
@@ -52,6 +54,7 @@ function App() {
             <Route path="/ListaEmpleados" element={<ListEmpleados />} />
             <Route path="/ListaContacto" element={<ListContacto />} />
             <Route path="/ListIngresos" element={<ListProductos />} />
+            <Route path="/ListPedidosPlanta" element={<ListPedidoPlanta />} />
 
             {/* Formularios */}
 
@@ -61,6 +64,7 @@ function App() {
             <Route path="/FormularioTrabajadores" element={<FormEmpleados />}></Route>
             <Route path="/FormularioContactos" element={<FormContacto />}></Route>
             <Route path="/FormularioIngresosProductos" element={<FormProductos />}></Route>
+            <Route path="/FormularioPedidosPlanta" element={<FormPedidosPlanta />}></Route>
 
             
           {/* <Route path="/registro" element={<RegistroLogin />} /> */}
