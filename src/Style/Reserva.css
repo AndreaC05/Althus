@@ -20,8 +20,8 @@ th {
     text-align: center;
 }
 
-td {
-    /* text-align: center; */
+.table_reserva td {
+    text-align: center;
 }
 
 .table_reserva .p-inputtext {
@@ -47,4 +47,10 @@ td {
     background-color: transparent;
     color: blue;
     border: none;
+}
+
+.btn_ver_cotizar {
+    background-color: transparent;
+    color: #28446A;
+    border: none
 }

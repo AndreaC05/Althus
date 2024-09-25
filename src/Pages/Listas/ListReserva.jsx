@@ -85,8 +85,18 @@ export default function ListReserva() {
           tableStyle={{ minWidth: "50rem" }}
           className="table_reserva_datos"
         >
-          <Column field="id" header="Itém" className="p-2" style={{ width: "5%" }}/>
-          <Column field="cliente" header="Cliente" className="p-3" style={{ width: "25%" }}/>
+          <Column
+            field="id"
+            header="Itém"
+            className="p-2"
+            style={{ width: "5%" }}
+          />
+          <Column
+            field="cliente"
+            header="Cliente"
+            className="p-3"
+            style={{ width: "25%" }}
+          />
           <Column
             field="fecha"
             header="Fechas"
@@ -99,7 +109,11 @@ export default function ListReserva() {
               />
             )}
           />
-          <Column field="metodo_pago" header="Método Pago" style={{ width: "12%" }}/>
+          <Column
+            field="metodo_pago"
+            header="Método Pago"
+            style={{ width: "12%" }}
+          />
           <Column
             header="Ver Detalle"
             className="column"
@@ -112,8 +126,13 @@ export default function ListReserva() {
               />
             )}
           />
-          <Column field="" header="Cotizar" style={{ width: "8%" }}/>
-          <Column field="" header="Acción" style={{ width: "8%" }}/>
+          <Column
+            field=""
+            header="Cotizar"
+            style={{ width: "8%" }}
+            body={(rowData) => <Button icon="pi pi-file-export" className="btn_ver_cotizar"/>}
+          />
+          <Column field="" header="Acción" style={{ width: "8%" }} />
         </TreeTable>
       </div>
 
@@ -127,9 +146,15 @@ export default function ListReserva() {
       >
         {reservaSeleccionada ? (
           <div>
-            <p><strong>Número de Reserva:</strong> {reservaSeleccionada.id}</p>
-            <p><strong>Cliente:</strong> {reservaSeleccionada.cliente}</p>
-            <p><strong>Método de Pago:</strong> {reservaSeleccionada.metodo_pago}</p>
+            <p>
+              <strong>Número de Reserva:</strong> {reservaSeleccionada.id}
+            </p>
+            <p>
+              <strong>Cliente:</strong> {reservaSeleccionada.cliente}
+            </p>
+            <p>
+              <strong>Método de Pago:</strong> {reservaSeleccionada.metodo_pago}
+            </p>
             {/* Puedes agregar más detalles según tu estructura de datos */}
           </div>
         ) : null}
@@ -143,9 +168,7 @@ export default function ListReserva() {
         modal
         onHide={hideCalendarioDialog}
       >
-        {fechaSeleccionada ? (
-          <DialogFechas />
-        ) : null}
+        {fechaSeleccionada ? <DialogFechas /> : null}
       </Dialog>
     </>
   );
