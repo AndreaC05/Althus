@@ -4,6 +4,7 @@ import { Dropdown } from "primereact/dropdown";
 import { InputNumber } from "primereact/inputnumber";
 import { InputTextarea } from "primereact/inputtextarea";
 import { MultiSelect } from "primereact/multiselect";
+import { Button } from "primereact/button";
 import "../../../Style/Formulario.css";
 
 export default function FormPedidosPlanta() {
@@ -76,6 +77,9 @@ export default function FormPedidosPlanta() {
               maxSelectedLabels={3}
               className="w-full md:w-40rem h-2rem p-2"
             />
+          </div>
+          <div className="button_guardar">
+            <Button label="Agregar Pedido" />
           </div>
         </div>
       </div>
