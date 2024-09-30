@@ -3,6 +3,7 @@ import SideBar from "../../../Components/SideBar";
 import { Dropdown } from "primereact/dropdown";
 import { InputNumber } from "primereact/inputnumber";
 import { InputTextarea } from "primereact/inputtextarea";
+import { MultiSelect } from "primereact/multiselect";
 import "../../../Style/Formulario.css";
 
 export default function FormPedidosPlanta() {
@@ -12,7 +13,12 @@ export default function FormPedidosPlanta() {
     { name: "AGUA MINERAL DE MANANTIAL BIDON 20Lt", code: "NY" },
     { name: "AGUA MINERAL DE MANANTIAL BOTELLÓN 7Lt", code: "NY" },
   ];
-  const [detalle, setDetalle] = useState('');
+  const [detalle, setDetalle] = useState("");
+  const [selectedCantpro, setSelectedCantpro] = useState(null);
+  const cities = [
+    { name: "10", code: "NY" },
+    { name: "5", code: "RM" },
+  ];
 
   return (
     <>
@@ -57,6 +63,18 @@ export default function FormPedidosPlanta() {
               onChange={(e) => setDetalle(e.target.value)}
               rows={5}
               cols={30}
+            />
+          </div>
+          <div className="section">
+            <label htmlFor="">Bidones a Entregar</label>
+            <MultiSelect
+              value={selectedCantpro}
+              onChange={(e) => setSelectedCantpro(e.value)}
+              options={cities}
+              optionLabel="name"
+              placeholder="Cantidad"
+              maxSelectedLabels={3}
+              className="w-full md:w-40rem h-2rem p-2"
             />
           </div>
         </div>
