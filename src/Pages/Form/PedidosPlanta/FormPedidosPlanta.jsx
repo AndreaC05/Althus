@@ -1,14 +1,18 @@
 import { useState } from "react";
 import SideBar from "../../../Components/SideBar";
 import { Dropdown } from "primereact/dropdown";
+import { InputNumber } from "primereact/inputnumber";
+import { InputTextarea } from "primereact/inputtextarea";
 import "../../../Style/Formulario.css";
 
 export default function FormPedidosPlanta() {
+  const [cantidad, setCantidad] = useState(1);
   const [selectedProducto, setSelectedProducto] = useState(null);
   const producto = [
     { name: "AGUA MINERAL DE MANANTIAL BIDON 20Lt", code: "NY" },
     { name: "AGUA MINERAL DE MANANTIAL BOTELLÓN 7Lt", code: "NY" },
   ];
+  const [detalle, setDetalle] = useState('');
 
   return (
     <>
@@ -32,6 +36,27 @@ export default function FormPedidosPlanta() {
               className="w-full md:w-40rem p-2"
               checkmark={true}
               highlightOnSelect={false}
+            />
+          </div>
+          <div className="section">
+            <label htmlFor="">Cantidad</label>
+            <InputNumber
+              inputId="minmax"
+              value={cantidad}
+              onValueChange={(e) => setCantidad(e.value)}
+              min={0}
+              max={100}
+              className="w-3rem h-2rem"
+            />
+          </div>
+          <div className="section">
+            <label htmlFor="">Más Detalle</label>
+            <InputTextarea
+              autoResize
+              value={detalle}
+              onChange={(e) => setDetalle(e.target.value)}
+              rows={5}
+              cols={30}
             />
           </div>
         </div>
