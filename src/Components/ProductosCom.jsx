@@ -41,7 +41,7 @@ export default function ProductosCom() {
         >
           <img
             className="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round"
-            src={`https://primefaces.org/cdn/primereact/images/product/${product.image}`}
+            src={product.image}
             alt={product.name}
           />
           <div className="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-4">

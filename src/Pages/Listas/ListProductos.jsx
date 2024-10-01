@@ -16,17 +16,17 @@ export default function ListProductos() {
   }, []);  
 
   const formatCurrency = (value) => {
-    return value.toLocaleString("en-US", {
+    return value.toLocaleString("es-PE", {
       style: "currency",
-      currency: "USD",
+      currency: "PEN",
     });
   };
 
   const imageBodyTemplate = (product) => {
     return (
       <img
-        src={`https://primefaces.org/cdn/primereact/images/product/${product.image}`}
-        alt={product.image}
+        src={product.image} // Usa directamente el valor de la propiedad 'image'
+        alt={product.name}   // Es recomendable usar el nombre del producto en el atributo 'alt'
         className="w-6rem shadow-2 border-round"
       />
     );
