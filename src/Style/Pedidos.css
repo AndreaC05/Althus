@@ -1,0 +1,14 @@
+.container_table_pedidos {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 30px;
+}
+
+.container_table_pedidos .p-paginator-bottom {
+    margin-top: 10px;
+}
+
+.container_table_pedidos td {
+    padding: 5px;
+}
