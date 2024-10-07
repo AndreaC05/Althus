@@ -11,3 +11,8 @@
     align-items: center;
     margin-top: 20px;
 }
+
+.botones_scanner {
+    /* border: 1px solid black; */
+    justify-content: center;
+}
