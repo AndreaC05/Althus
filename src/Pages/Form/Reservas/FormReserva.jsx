@@ -30,7 +30,7 @@ export default function FormReserva() {
         <h2>Fomulario Reserva</h2>
       </div>
 
-      <div className="container_formulario flex justify-content-center align-items-center">
+      <div className="container_formulario ">
         <div className="formulario_reserva formulario">
           <h3>Agregar Reserva</h3>
           <div className="sectiones flex">

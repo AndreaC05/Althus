@@ -25,7 +25,7 @@ export default function Cotizacion() {
             </div>
           </div>
           <hr className="divisor mt-5"/>
-          <div className="container_formulario">
+          <div className="container_formulario_cot">
             <div className="formulario_cot mt-2">
               <div className="sectiones">
                 <div className="section">
