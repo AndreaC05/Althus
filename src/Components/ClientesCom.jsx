@@ -34,10 +34,10 @@ export default function ClientesCom() {
     <>
       <div className="card cliente_com">
         <div className="header_com flex p-3">
-            <h3>Clientes</h3>
-            <div className="search_cliente">
-                <SearchCom />
-            </div>
+          <h3>Clientes</h3>
+          <div className="search_cliente">
+            <SearchCom />
+          </div>
         </div>
         <DataTable
           value=""
@@ -50,12 +50,13 @@ export default function ClientesCom() {
           paginatorLeft={paginatorLeft}
           paginatorRight={paginatorRight}
         >
-          <Column field="name" header="Cliente" icon="pi pi-chevron-down" style={{ width: "25%", padding: "16px" }}></Column>
           <Column
-            field="ruc"
-            header="Ruc"
-            style={{ width: "20%" }}
+            field="name"
+            header="Cliente"
+            icon="pi pi-chevron-down"
+            style={{ width: "25%", padding: "16px" }}
           ></Column>
+          <Column field="ruc" header="Ruc" style={{ width: "20%" }}></Column>
           <Column
             field="Sede Principal"
             header="Sede Principal"
