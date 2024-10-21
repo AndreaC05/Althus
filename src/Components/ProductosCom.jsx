@@ -5,6 +5,7 @@ import { DataView } from "primereact/dataview";
 import { Tag } from "primereact/tag";
 import { classNames } from "primereact/utils";
 import { ProductService } from "./service/ProductService";
+import { Link } from "react-router-dom";
 import "../Style/Productos.css";
 
 export default function ProductosCom() {
@@ -61,11 +62,13 @@ export default function ProductosCom() {
             </div>
             <div className="flex sm:flex-column align-items-center sm:align-items-end gap-3 sm:gap-2">
               <span className="text-2xl font-semibold">${product.price}</span>
-              <Button
-                icon="pi pi-shopping-cart"
-                className="p-button-rounded"
-                disabled={product.inventoryStatus === "OUTOFSTOCK"}
-              ></Button>
+              <Link to="/FormularioReserva">
+                <Button
+                  icon="pi pi-shopping-cart"
+                  className="p-button-rounded p-2"
+                  disabled={product.inventoryStatus === "OUTOFSTOCK"}
+                />
+              </Link>
             </div>
           </div>
         </div>
