@@ -69,3 +69,30 @@
 .p-multiselect-item {
     margin-bottom: 5px;
 }
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1235px) {
+    .container_formulario {
+        flex-direction: column;
+    }
+
+    .formulario_detalle {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 779px) {
+    .sectiones_re {
+        flex-direction: column;
+    }
+
+    
+}
+
+@media screen and (max-width: 767px) {
+    .met_pag {
+        width: 17.5rem !important;
+    }
+}

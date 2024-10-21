@@ -33,14 +33,14 @@ export default function FormReserva() {
       <div className="container_formulario ">
         <div className="formulario_reserva formulario">
           <h3>Agregar Reserva</h3>
-          <div className="sectiones flex">
+          <div className="sectiones sectiones_re flex">
             <div className="section">
               <label htmlFor="">Fecha</label>
-              <Calendar value={date} onChange={(e) => setDate(e.value)} className="w-17rem h-2rem"/>
+              <Calendar value={date} onChange={(e) => setDate(e.value)} className="w-17rem h-2rem input_form"/>
             </div>
             <div className="section">
               <label htmlFor="">Fecha Entrega</label>
-              <Calendar value={date2} onChange={(e) => setDate2(e.value)} className="w-17rem h-2rem"/>
+              <Calendar value={date2} onChange={(e) => setDate2(e.value)} className="w-17rem h-2rem input_form"/>
             </div>
           </div>
           <div className="section">
@@ -56,7 +56,7 @@ export default function FormReserva() {
               highlightOnSelect={false}
             />
           </div>
-          <div className="sectiones flex">
+          <div className="sectiones sectiones_re flex">
             <div className="section">
               <label htmlFor="">Método Pago</label>
               <Dropdown
@@ -65,7 +65,7 @@ export default function FormReserva() {
               options={metodo}
               optionLabel="name"
               placeholder="Seleccione el método pago"
-              className="w-full md:w-17rem p-2"
+              className="w-full md:w-17rem p-2 met_pag"
               checkmark={true}
               highlightOnSelect={false}
             />
