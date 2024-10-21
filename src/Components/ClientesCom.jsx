@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "primereact/button";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
-import { CustomerService } from "./service/CustomerService";
+// import { CustomerService } from "./service/CustomerService";
 import SearchCom from "./SearchCom";
 import "../Style/Cliente.css";
 import "../Style/Inicio.css";
@@ -13,9 +13,9 @@ export default function ClientesCom() {
   const paginatorLeft = <Button type="button" icon="pi pi-refresh" text />;
   const paginatorRight = <Button type="button" icon="pi pi-download" text />;
 
-  useEffect(() => {
-    CustomerService.getCustomersMedium().then((data) => setCustomers(data));
-  }, []);
+  // useEffect(() => {
+  //   CustomerService.getCustomersMedium().then((data) => setCustomers(data));
+  // }, []);
 
   return (
     <>
@@ -27,7 +27,7 @@ export default function ClientesCom() {
             </div>
         </div>
         <DataTable
-          value={customers}
+          value=""
           paginator
           rows={5}
           rowsPerPageOptions={[5, 10, 25, 50]}
@@ -39,18 +39,18 @@ export default function ClientesCom() {
         >
           <Column field="name" header="Cliente" icon="pi pi-chevron-down" style={{ width: "25%", padding: "16px" }}></Column>
           <Column
-            field="country.name"
-            header="Country"
+            field="ruc"
+            header="Ruc"
             style={{ width: "25%" }}
           ></Column>
           <Column
-            field="company"
-            header="Company"
+            field="Sede Principal"
+            header="Sede Principal"
             style={{ width: "25%" }}
           ></Column>
           <Column
-            field="representative.name"
-            header="Representative"
+            field="direccion_despacho"
+            header="Dirección Despacho"
             style={{ width: "25%" }}
           ></Column>
         </DataTable>
