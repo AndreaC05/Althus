@@ -39,35 +39,35 @@ export default function Cotizacion() {
                     <label htmlFor="">Tipo Doc.</label>
                     <InputText
                       disabled
-                      className="h-2rem w-15rem"
+                      className="h-2rem w-30rem"
                       placeholder="RUC"
                     />
                   </div>
                   <div className="section">
                     <label htmlFor="">N° Doc.</label>
-                    <InputText disabled className="h-2rem w-16rem" />
+                    <InputText disabled className="h-2rem w-30rem" />
                   </div>
                   <div className="section">
                     <label htmlFor="">Email</label>
                     <InputText disabled className="h-2rem w-30rem" />
                   </div>
                 </div>
-                <div className="section_cot flex">
+                <div className="section_cot mt-3 flex">
                   <div className="section">
                     <label htmlFor="">Contacto 1</label>
-                    <InputText disabled className="h-2rem w-17rem" />
+                    <InputText disabled className="h-2rem w-22rem" />
                   </div>
                   <div className="section">
                     <label htmlFor="">Teléfono</label>
-                    <InputText disabled className="h-2rem" />
+                    <InputText disabled className="h-2rem w-22rem" />
                   </div>
                   <div className="section">
                     <label htmlFor="">Contacto 2</label>
-                    <InputText disabled className="h-2rem w-17rem" />
+                    <InputText disabled className="h-2rem w-22rem" />
                   </div>
                   <div className="section">
                     <label htmlFor="">Teléfono</label>
-                    <InputText disabled className="h-2rem" />
+                    <InputText disabled className="h-2rem w-22rem" />
                   </div>
                 </div>
 
@@ -81,12 +81,12 @@ export default function Cotizacion() {
                   <div className="section_cot flex">
                     <div className="section">
                       <label htmlFor="">Cantidad</label>
-                      <InputText disabled className="h-2rem w-10rem" />
+                      <InputText disabled className="h-2rem w-20rem" />
                     </div>
                     <div className="section">
                       <label htmlFor="">Precio Uni.</label>
                       <InputNumber
-                        className="h-2rem"
+                        className="h-2rem w-20rem"
                         inputId="currency-us"
                         value={precio}
                         onValueChange={(e) => setPrecio(e.value)}
@@ -99,7 +99,7 @@ export default function Cotizacion() {
                       <label htmlFor="">Precio Total</label>
                       <InputNumber
                         disabled
-                        className="h-2rem"
+                        className="h-2rem w-20rem"
                         inputId="currency-us"
                         value={precio}
                         onValueChange={(e) => setPrecio(e.value)}
