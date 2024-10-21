@@ -16,3 +16,13 @@
     /* border: 1px solid black; */
     justify-content: center;
 }
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 688px) {
+    .productos_com {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
