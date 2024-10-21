@@ -25,6 +25,8 @@
 
 .section_cot {
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .table_cotizar {
@@ -44,6 +46,14 @@
 
 /* RESPONSIVE */
 
-@media screen and (max-width: 1790px) {
-    
+@media screen and (max-width: 1777px) {
+    .section {
+        margin-top: 8px;
+    }
+}
+
+@media screen and (max-width: 592px) {
+    .section input {
+        width: 100% !important;
+    }
 }

@@ -78,7 +78,7 @@ export default function Cotizacion() {
                   </div>
                 </div>
                 <div className="sectiones">
-                  <div className="section_cot flex">
+                  <div className="section_cot section_precios flex">
                     <div className="section">
                       <label htmlFor="">Cantidad</label>
                       <InputText disabled className="h-2rem w-20rem" />
@@ -95,7 +95,7 @@ export default function Cotizacion() {
                         locale="en-US"
                       />
                     </div>
-                    <div className="section">
+                    <div className="section section_prec">
                       <label htmlFor="">Precio Total</label>
                       <InputNumber
                         disabled
@@ -108,9 +108,9 @@ export default function Cotizacion() {
                         locale="en-US"
                       />
                     </div>
-                    <div className="section">
+                    <div className="section section_met">
                       <label htmlFor="">Met. de pago</label>
-                      <InputText disabled className="h-2rem w-26rem" />
+                      <InputText disabled className="h-2rem w-20rem" />
                     </div>
                   </div>
                 </div>
@@ -122,7 +122,7 @@ export default function Cotizacion() {
           </div>
         </div>
       </div>
-      <div className="table_cotizar">
+      <div className="table_cotizar mb-5">
         <TableCotizar />
       </div>
     </>
