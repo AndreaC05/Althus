@@ -85,7 +85,7 @@ export default function ListPedidos() {
             style={{ width: "10%" }}
           ></Column>
           <Column
-            header="Ver Detalle"
+            header="Detalle"
             className="column"
             style={{ width: "10%" }}
             body={(rowData) => (
