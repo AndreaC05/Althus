@@ -333,7 +333,7 @@ export default function SideBar() {
                                 to="/FormularioIngresosProductos"
                                 className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full"
                               >
-                                <i className="pi pi-plus"></i>
+                                <i className="pi pi-plus mr-2"></i>
                                 <span className="font-medium">
                                   Agregar Producto
                                 </span>
