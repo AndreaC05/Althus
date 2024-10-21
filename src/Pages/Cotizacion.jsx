@@ -34,7 +34,7 @@ export default function Cotizacion() {
                 </div>
               </div>
               <div className="sectiones">
-                <div className="section_cot flex">
+                <div className="section_cot section_datos_em flex">
                   <div className="section">
                     <label htmlFor="">Tipo Doc.</label>
                     <InputText
@@ -47,7 +47,7 @@ export default function Cotizacion() {
                     <label htmlFor="">N° Doc.</label>
                     <InputText disabled className="h-2rem w-30rem" />
                   </div>
-                  <div className="section">
+                  <div className="section section_email">
                     <label htmlFor="">Email</label>
                     <InputText disabled className="h-2rem w-30rem" />
                   </div>
