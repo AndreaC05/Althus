@@ -23,7 +23,7 @@ export default function SideBar() {
   const btnRef10 = useRef(null); //ref para el kardex
   const btnRef11 = useRef(null);
   const btnRef12 = useRef(null); //ref para pedidos planta
-  // const btnRef13 = useRef(null);
+  const btnRef13 = useRef(null); // ref para Clientes Opcion
   
 
   return (
@@ -279,6 +279,41 @@ export default function SideBar() {
                           <Link to="/FormularioPedidosPlanta" className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                             <i className="pi pi-file-edit mr-2"></i>
                             <span className="font-medium">Formulario</span>
+                            <Ripple />
+                          </Link>
+                        </li>
+                      </ul>
+                    </li>
+                    <li className="border-top-1 surface-border">
+                      <StyleClass
+                        nodeRef={btnRef13}
+                        selector="@next"
+                        enterClassName="hidden"
+                        enterActiveClassName="slidedown"
+                        leaveToClassName="hidden"
+                        leaveActiveClassName="slideup"
+                      >
+                        <div
+                          ref={btnRef13}
+                          className="p-ripple p-3 flex align-items-center justify-content-between text-600 cursor-pointer"
+                        >
+                          <span className="font-medium">CLIENTES</span>
+                          <i className="pi pi-chevron-down"></i>
+                          <Ripple />
+                        </div>
+                      </StyleClass>
+                      <ul className="list-none p-0 m-0 overflow-hidden listclientes">
+                        <li>
+                          <Link to="" className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                            <i className="pi pi-objects-column mr-2"></i>
+                            <span className="font-medium">Lista Pedidos</span>
+                            <Ripple />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="" className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                            <i className="pi pi-file-edit mr-2"></i>
+                            <span className="font-medium">Realizar Pedido</span>
                             <Ripple />
                           </Link>
                         </li>
