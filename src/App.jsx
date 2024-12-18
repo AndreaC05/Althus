@@ -5,7 +5,8 @@ import "primeicons/primeicons.css";
 import "primeflex/primeflex.css";
 import "./App.css";
 
-// Importaciones de páginas
+// Importaciones de páginas Principales
+
 import Inicio from "./Pages/Inicio";
 import Login from "./Pages/Login";
 import DashBoard from "./Pages/Dashboard";

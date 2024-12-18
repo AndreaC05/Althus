@@ -304,14 +304,14 @@ export default function SideBar() {
                       </StyleClass>
                       <ul className="list-none p-0 m-0 overflow-hidden listclientes">
                         <li>
-                          <Link to="" className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                          <Link to="/ListaPedidosC" className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                             <i className="pi pi-objects-column mr-2"></i>
                             <span className="font-medium">Lista Pedidos</span>
                             <Ripple />
                           </Link>
                         </li>
                         <li>
-                          <Link to="" className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                          <Link to="/FormularioPedidosC" className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                             <i className="pi pi-file-edit mr-2"></i>
                             <span className="font-medium">Realizar Pedido</span>
                             <Ripple />
