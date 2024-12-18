@@ -18,6 +18,7 @@ import Cotizacion from "./Pages/Cotizacion";
 import ListPedidos from "./Pages/Listas/ListPedidos";
 import ListReserva from "./Pages/Listas/ListReserva";
 import ListClientes from "./Pages/Listas/ListClientes";
+import ListPedidosCli from "./Pages/Listas/ListPedidosCli.jsx";
 import ListEmpleados from "./Pages/Listas/ListEmpleados";
 import ListContacto from "./Pages/Listas/ListContacto";
 import ListProductos from "./Pages/Listas/ListProductos.jsx";
@@ -28,6 +29,7 @@ import ListPedidoPlanta from "./Pages/Listas/ListPedidoPlanta.jsx";
 import FormReserva from "./Pages/Form/Reservas/FormReserva";
 import FormPedidos from "./Pages/Form/Pedidos/FormPedidos";
 import FormClientes from "./Pages/Form/Clientes/FormClientes";
+import RealizarPedidoCli from "./Pages/Form/Clientes/RealizarPedidoCli.jsx";
 import FormEmpleados from "./Pages/Form/Trabajadores/FormEmpleados";
 import FormContacto from "./Pages/Form/Contacto/FormContacto";
 import FormProductos from "./Pages/Form/Productos/FormProductos";
@@ -49,6 +51,7 @@ function App() {
             {/* Listas archivos */}
 
             <Route exact path='/ListaCliente' element={<ListClientes />}/>
+            <Route exact path='/ListaPedidosC' element={<ListPedidosCli />}/>
             <Route path="/ListaReserva" element={<ListReserva />}></Route>
             <Route path="/ListaPedido" element={<ListPedidos />} />
             <Route path="/ListaEmpleados" element={<ListEmpleados />} />
@@ -59,6 +62,7 @@ function App() {
             {/* Formularios */}
 
             <Route path="/FormularioClientes" element={<FormClientes />}></Route>
+            <Route path="/FormularioPedidosC" element={<RealizarPedidoCli />}></Route>
             <Route path="/FormularioReserva" element={<FormReserva />}></Route>
             <Route path="/FormularioPedidos" element={<FormPedidos />}></Route>
             <Route path="/FormularioTrabajadores" element={<FormEmpleados />}></Route>
